@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/PageLayout.astro';
+import HeroText from '../../components/widgets/HeroText.astro';
+import Features2 from '../../components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contact',
+};
+---
+
+<Layout metadata={metadata}>
+  
+  
+  <!-- HeroText Widget ******************* -->
+  <HeroText tagline="questions, feedback, etc." title="Contact us" />
+
+
+  <div class="flex items-center justify-center">
+    <img src="/src/assets/images/deafbits-logo.png" alt="deafbits logo" class="w-40 h-auto">
+  </div>  
+
+  <Features2
+    title="support@dingoapp.net"
+    items={[
+      {
+        title: 'General inquiry',
+        description: `Chat with us about the DINGO! app, your local DINGO experiences, general inquiries, or anything else.`,
+        icon: 'tabler:message-circle',
+        callToAction: { text: 'email',
+                        href: 'mailto:support@dingoapp.net?subject=DINGO!%20-%20General%20inquiry',
+
+                      } 
+      },
+      {
+        title: 'Bug reporting',
+        description: `If you see any bugs in the software, errors or issues, please report it!`,
+        icon: 'tabler:bug',
+        callToAction: { text: 'Report',
+                        href: 'mailto:support@dingoapp.net?subject=DINGO!%20-%20Bug%20report',
+
+        }
+      },
+    ]}
+  />
+</Layout>

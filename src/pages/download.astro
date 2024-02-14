@@ -1,0 +1,43 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import HeroText from "../components/widgets/HeroText.astro";
+import versionNumber from 'version-number';
+
+const metadata = {
+  title: 'Download',
+  ignoreTitleTemplate: true,
+};
+---
+<Layout metadata={metadata}>
+  <HeroText tagline="software" title="Downloads" />
+  
+  <Features2
+    title=""
+    items={[
+      {
+        title: 'Windows',
+        description: `Version <strong>${versionNumber}</strong>`,
+        icon: 'tabler:brand-windows',
+        callToAction: { text: 'Download', href: 'https://github.com/carb0nxl/dingo-software/releases/download/windows/DINGO.exe'} // CallToAction object for item 1
+
+      },
+      {
+        title: 'macOS',
+        description: 'Coming soon!',
+        icon: 'tabler:brand-apple-filled',
+        // callToAction: { text: 'Download', href: '/windows-download' } // note
+
+      },
+      {
+        title: 'Web browser',
+        description: 'Play instantly via website.',
+        icon: 'tabler:browser',
+        callToAction: { text: 'Play now!', href: 'https://dingoapp.io' } // note
+      },
+    ]}
+
+  />
+  
+  
+</Layout>

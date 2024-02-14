@@ -41,7 +41,7 @@ const {
             <Fragment set:html={image} />
           ) : (
             <Image
-              class="w-full h-80 object-cover rounded-xl mx-auto bg-gray-500 shadow-lg"
+              class="w-full h-80 object-cover rounded-xl mx-auto bg-[#0E0317FF] shadow-lg"
               width="auto"
               height={320}
               widths={[400, 768]}
@@ -63,7 +63,7 @@ const {
       panel: 'max-w-full sm:max-w-md',
       title: 'text-lg font-semibold',
       description: 'mt-0.5',
-      icon: 'flex-shrink-0 mt-1 text-primary w-6 h-6',
+      icon: 'flex-shrink-0 mt-1 text-violet-500 w-12 h-12',
       ...((classes?.items as {}) ?? {}),
     }}
   />

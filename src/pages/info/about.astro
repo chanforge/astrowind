@@ -1,0 +1,179 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import {getBlogPermalink, getPermalink} from "../../utils/permalinks";
+
+const metadata = {
+  title: 'About',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+
+  <div class="flex justify-center items-center mt-12 mb-6">
+    <img src="/src/assets/images/logo.svg" alt="Your Logo" class="w-96 h-auto">
+  </div>
+  
+  
+  <!-- Hero2 Widget ******************* -->
+  
+
+
+  <Hero
+    id="hero"
+    title=""
+    tagline=""
+  >
+    
+    <Fragment slot="subtitle">
+
+      <p class="text-2xl"><strong>DINGO! is a free app to use for playing dingo games!</strong> <br /><br />
+      Whether it's with friends, family, or a clubhouse packed with Deaf patrons, this app takes care of everything for you.
+      </p>
+      <header class="text-center py-8">
+        <h1 class="font-bold text-3xl md:text-4xl lg:text-6xl">
+        <span class="bg-gradient-to-r from-fuchsia-500 to-purple-700 text-transparent bg-clip-text">No subscriptions.</span> <br>
+          <span class="bg-gradient-to-r from-indigo-500 to-violet-600 text-transparent bg-clip-text">No fees.</span> <br>
+          <span class="bg-gradient-to-r from-fuchsia-500 to-purple-700 text-transparent bg-clip-text">No contracts.</span> <br>
+          <span class="bg-gradient-to-r from-indigo-500 to-violet-600 text-transparent bg-clip-text">No licensing.</span>
+        </h1>
+      </header>
+
+
+
+    <p class="text-4xl">
+      <strong>Free forever.</strong>
+    </p>
+    <br /><br/>
+      
+    <p class="text-xl">
+      DINGO! was developed as a passion project by a Deaf software developer and remains a maintained project to this day.
+    <br /><br />
+      The purpose of this app is to modernize the classic DINGO game and make it as popular as ever, through accessible and convenient means.
+    <br /><br />
+      You had to find a club hosting a DINGO game to play...<br /><strong>now you can play with friends anywhere!</strong>
+    </p>
+    </Fragment>
+  </Hero>
+  
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Read story',
+        href: getPermalink('origin/origin-story', 'post'),
+        target: '_blank',
+        icon: '',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      <span class="sm:whitespace-nowrap"> What inspired this app?</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      You can read more about the journey throughout the development of this game
+      and what inspired its' purpose.
+    </Fragment>
+  </CallToAction>
+  
+  
+  
+  
+  <!-- Testimonials Widget *********** -->
+
+  <!--<Testimonials-->
+  <!--  title="Testimonials"-->
+  <!--  subtitle="Discover what clients have to say about their experiences working with me."-->
+  <!--  testimonials={[-->
+  <!--    {-->
+  <!--      testimonial: `Thank you so much for sharing the Dingo program with us.  I’m happy to say that we used it at the Ocean Deaf Club with success!  Everyone loved the new program and it was much easier for people to see who has vision trouble. `,-->
+  <!--      name: 'Diane Hammond',-->
+  <!--      job: '' +-->
+  <!--        'President, Ocean Deaf Club',-->
+  <!--      image: {-->
+  <!--        src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',-->
+  <!--        alt: 'Mark Thompson Image',-->
+  <!--      },-->
+  <!--    },-->
+  <!--    {-->
+  <!--      testimonial: `She transformed our brand identity with her creative finesse, capturing our essence in every element. Her dedication and talent truly shine through her work.`,-->
+  <!--      name: 'Emily Martinez',-->
+  <!--      job: 'CEO',-->
+  <!--      image: {-->
+  <!--        src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',-->
+  <!--        alt: 'Emily Martinez Image',-->
+  <!--      },-->
+  <!--    }-->
+  <!--  ]}-->
+  <!--/>-->
+  
+  
+  
+  
+  
+  <!-- Meet the Developer **************** -->
+  <Content
+    id="about"
+    columns={3}
+    items={[
+      {
+        icon: 'tabler:home',
+        callToAction: {
+          target: '_blank',
+          text: 'Website',
+          href: 'https://chanbrown.com',
+        },
+      },
+      {
+        icon: 'tabler:mail',
+        callToAction: {
+          target: '_blank',
+          text: 'Contact',
+          href: 'mailto:support@dingoapp.net?subject=DINGO!%20-%20General%20inquiry',
+        },
+      },
+      {
+        icon: 'tabler:brand-linkedin',
+        callToAction: {
+          target: '_blank',
+          text: 'Linkedin',
+          href: 'https://www.linkedin.com/in/channingsbrown/',
+        },
+      },
+    ]}
+    image={{
+      src: '/src/assets/images/Teal1.png',
+      alt: 'A portrait of Channing',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Meet the developer</h3>
+      <p>
+        Hey there.
+      </p>
+      <br />
+      <p>
+        I'm Channing, and I like to build stuff for fun. I decided to try my hand at game development by challenging myself to take on this dingo app as my first project.<br />
+        <br/>
+        Despite being a "learning project", my interest endured - compelling me to continue its development with the hope of shaping it into something meaningful for the Deaf community.<br />
+        <br />
+        With that said, I'm still learning new things! 
+        <br/>
+        I enjoy Formula 1, cars, photography and media, computer & tech and hardware, manga, and peace & quiet 🤫
+      </p>
+      <br />
+      <p>Check out my work & feel free to contact me!</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+
+
+</Layout>

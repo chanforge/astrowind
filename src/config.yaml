@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: DINGO!
+  site: 'https://dingoapp.net'
   base: '/'
   trailingSlash: false
 
@@ -9,24 +9,19 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: DINGO!
+    template: '%s — DINGO!'
+  description: "\U0001F680 A free and modern app for playing Deaf Bingo games with."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: DINGO!
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/default.png' 
         width: 1200
         height: 628
     type: website
-  twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
-    cardType: summary_large_image
-
 i18n:
   language: en
   textDirection: ltr
@@ -69,7 +64,7 @@ analytics:
       id: null # or "G-XXXXXXXXXX"
 
 ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  theme: 'dark' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
   tokens:
     default:

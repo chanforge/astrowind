@@ -1,0 +1,94 @@
+---
+import Brands from "../../components/widgets/Brands.astro";
+import Layout from '../../layouts/PageLayout.astro';
+import HeroText from '../../components/widgets/HeroText.astro';
+import Features2 from '../../components/widgets/Features2.astro';
+import Content from '../../components/widgets/Content.astro';
+import Hero from "../../components/widgets/Hero.astro";
+
+const metadata = {
+  title: 'Contact',
+};
+
+---
+<Layout metadata={metadata}>
+  
+  
+  <!--<HeroText tagline="support our work" title="Donate" />-->
+  
+  <Hero
+    image={{ src: '', alt: '' }}
+  >
+    <Fragment slot="title">
+      Become a 
+      <span class="bg-gradient-to-r from-violet-600 to-fuchsia-700 dark:bg-gradient-to-r dark:from-purple-500 dark:to-fuchsia-500 text-transparent bg-clip-text">supporter!</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="text-xl">
+        <strong>Every contribution, regardless of its size or form,<br />is deeply appreciated and recognized.</strong><br /><br />
+      </span>
+      <img src="/src/assets/images/neon-donate.png" alt="DINGO game at Atlantic County Society of the Deaf clubhouse" class=" w-96 mx-auto rounded-lg">
+      <span class="text-xl font-normal">
+        Your support fuels the ongoing development and improvement of the DINGO! app.<br />
+        We welcome any crowdfunding to cover the costs of development and hosting.<br />
+        <br />
+        We extend our <span class="bg-gradient-to-r from-red-800 to-fuchsia-900 dark:bg-gradient-to-r dark:from-fuchsia-500 dark:to-pink-500 text-transparent bg-clip-text">heartfelt gratitude</span> to each and every supporter, as your dedication will be rewarded with recognition.<br /><br />
+      </span>
+    </Fragment>
+  </Hero>
+
+  <!-- Brands Widget ****************** -->
+  <Brands
+    title="Make a donation"
+    subtitle="We support various secure payment platforms.<br />If you would prefer, you can <strong>email us directly</a></strong> instead."
+    icons={[]}
+    images={[
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png',
+        alt: 'Paypal',
+        href: '',
+      },
+      {
+        src: '/src/assets/images/logos/RGB_CashApp_Logo_Primary_Black.png',
+        alt: 'Cash App',
+        href: 'https://cash.app/$channingsbrown',
+      },
+      {
+        src: '/src/assets/images/logos/ko-fi-logo.png',
+        alt: 'Ko-Fi',
+        href: 'https://ko-fi.com/chanbrown',
+      },
+    ]}
+  />
+
+  <div class="flex justify-center">
+    <a href="mailto:support@dingoapp.net?subject=DINGO!%20-%20Donation%20inquiry" class="inline-block px-6 py-3 rounded-lg border border-gray-400 text-gray-500 dark:text-gray-200 transition-all duration-300 hover:border-transparent bg-transparent hover:text-black dark:hover:text-fuchsia-300 hover:shadow-md">
+      Email us
+    </a>
+  </div>
+
+
+
+  <!--CONTAINER: Supporters-->
+  <div class="mt-24">
+    <!--SUPPORTERS title-->
+    <h2 class="text-center text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 mx-auto font-heading dark:text-gray-100">Supporters</h2>
+  
+    <!--gradient line divider-->
+    <div class="mx-auto mt-0 mb-2 w-2/3 h-1 bg-gradient-to-r from-violet-500 to-fuchsia-500"></div>
+    
+    <!--List of supporters below-->
+    <!--text styling-->
+    <div class="pt-2 gap-8 text-center text-3xl font-bold leading-tighter tracking-tighter mb-4 font-heading">
+      <!--transition styling-->
+      <div class="text-white transition-colors duration-300 hover:text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:bg-transparent bg-clip-text">
+        <!--List all supporters below-->
+        <a href="https://www.acsdeaf.org">Atlantic County Society of the Deaf</a>
+      </div>
+    </div>
+  </div>
+  
+  <img src="/src/assets/images/neon-suits.png" alt="neon playing card suits" class="mt-40 mb-12 mx-auto w-80">
+
+</Layout>

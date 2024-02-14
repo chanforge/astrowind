@@ -23,14 +23,16 @@ const {
     {icons && icons.map((icon) => <Icon name={icon} class="py-3 lg:py-5 w-12 h-auto mx-auto sm:mx-0 text-gray-500" />)}
     {
       images &&
-        images.map(
-          (image) =>
-            image.src && (
-              <div class="flex justify-center col-span-1 my-2 lg:my-4 py-1 px-3 rounded-md dark:bg-gray-200">
+      images.map(
+        (image) =>
+          image.src && (
+            <div class="flex justify-center col-span-1 my-2 lg:my-4 py-1 px-3 rounded-md dark:bg-gray-200">
+              <a href={image.href} target="_blank" rel="noopener noreferrer">
                 <img src={image.src} alt={image.alt || ''} class="max-h-12" />
-              </div>
-            )
-        )
+              </a>
+            </div>
+          )
+      )
     }
   </div>
 </WidgetWrapper>

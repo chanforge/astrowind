@@ -250,6 +250,7 @@ export interface Features extends Headline, Widget {
   isAfterContent?: boolean;
 }
 
+
 export interface Faqs extends Headline, Widget {
   iconUp?: string;
   iconDown?: string;

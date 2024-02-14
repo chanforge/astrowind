@@ -1,0 +1,157 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from "../../components/widgets/Content.astro";
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import Steps from '~/components/widgets/Steps.astro';
+
+const metadata = {
+  title: 'How to play',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    tagline="Tutorial"
+    title="How to play DINGO"
+    subtitle="Learn how to play in just a few steps!"
+  />
+  
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="What you will need:"
+    subtitle=""
+    columns={2}
+    items={[
+      {
+        title: 'Playing cards',
+        description: 'Any standard deck of (52) playing cards will do. We do <span class="text-red-800 dark:text-red-500 bg-clip-text font-bold">not</span> use the joker cards. The app takes care of that for you.',
+        icon: 'tabler:play-card',
+      },
+      {
+        title: 'Four players',
+        description: 'This game requires a minimum of four (4) players, but can host up to 100+ players - as long there is a deck per table of (4) players.',
+        icon: 'tabler:user',
+      },
+      {
+        title: 'The DINGO! app',
+        description: 'You will need the DINGO! app running on a screen (TV, computer, iPad, projector, etc) and make sure your players can see it!',
+        icon: 'tabler:device-desktop',
+      }
+    ]}
+    classes={{ container: 'max-w-5xl' }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Basic playing guide"
+    tagline="tutorial"
+    isReversed={true}
+    items={[
+      {
+        title: 'Deal the cards.',
+        description: 'Players should take turns to shuffle the deck between every round of DINGO. <br /><br />' +
+          'After shuffling the deck, deal a card to every player until there are no cards left. <br />' +
+          'Each of the four players should be holding <strong>13 cards</strong>. <br />' +
+          '<span class="text-red-800 dark:text-red-500 bg-clip-text font-bold">We do not need the physical joker cards.</span>',
+        icon: 'tabler:number-1',
+      },
+      {
+        title: 'Start the game.',
+        description: 'With the <strong>DINGO!</strong> app ready, pick how long in seconds you would like a delay between each automatic drawing.<br />' +
+          'This can be adjusted by sliding the timer bar. <br /><br />' +
+          '<strong>When ready, start the round by pressing the green circular play button.</strong>',
+        icon: 'tabler:number-2',
+      },
+      {
+        title: 'Match the card.',
+        description: 'The DINGO! app will pick cards at random. <br />' +
+          '<strong>Your goal is to see if any of the cards in your hand match the ones drawn by the DINGO! app.</strong><br /><br />' +
+          'If you have the same card in hand as the random pick, <strong>discard it</strong>. ',
+        icon: 'tabler:number-3',
+      },
+      {
+        title: 'Win the round!',
+        description: 'If you run out of cards before anybody else, you win this round!',
+        icon: 'tabler:confetti',
+      }
+    ]}
+    image={{
+      src: '/src/assets/images/neon-cards-falling.png',
+      alt: 'A series of neon playing cards',
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'What is the Joker mode?',
+        description:
+          'The DINGO app includes a <strong>Joker Mode</strong>.<br /><br/>' +
+          'Not all deaf clubs prefer to use the joker, so this can be toggled on or off. ' +
+          '<span class="text-red-400 font-bold">Joker mode is OFF by default.</span><br /><br />' +
+          '<span class="text-violet-300 "><strong>NOTE:</strong> You do not need to use the real joker card in the deck of cards you pass out. This is for the software only.</span>',
+        icon: 'tabler:question-mark',
+      },
+      {
+        title: 'How it works:',
+        description: `
+          <span class="text-neutral-400 text-lg font-semibold">The joker mode adds a joker card into the "mix" of cards in the app.</span><br />
+          <ul class="mx-6 my-6 list-disc pl-6 text-lg text-muted">
+            <li>If the joker is drawn <strong>before</strong> any player wins the round, the game is paused.</li><br />
+            <li>After the game pauses, the host of the DINGO game will split the current round’s “pot” (money, rewards, etc.) and puts the other half of the prize <strong>towards the next round</strong>.</li><br />
+            <li>In summary, if a Joker is drawn, the current round’s players get shorted on the reward but the next round gets a bigger pot…<br /><strong> unless the joker card is drawn again!</strong></li>
+          </ul>
+          <span class="text-violet-300 "><strong>NOTE: </strong>When playing the final round, you can turn off the Joker Mode since there won't be any additional rounds to split the pot towards.
+        `,
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: '/src/assets/images/neon-joker.png',
+      alt: 'Joker hat',
+    }}
+  >
+    
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">The <span class="text-6xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent">Joker</span> Mode
+      </h3>
+    </Fragment>
+    
+  </Content>
+  
+  
+  
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Make a donation',
+        href: 'https://ko-fi.com/chanbrown',
+        target: '_blank',
+        icon: '',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      🤟this app?<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"> Support us!</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      The app will always be free, but coffee isn't! 🥤
+    </Fragment>
+  </CallToAction>
+  
+</Layout>
